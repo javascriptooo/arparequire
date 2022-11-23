@@ -14,9 +14,9 @@ for (let i = 0; i < textByLine.length; i++ ) {
     // rename the indexes to 'word' and 'arpanum'
     let lineReduced = line.reduce((w, a) => ({'word': w, 'arpanum': a}))
 
-    // remove numbers from 'arpanum' value and add as new key value pair
+    // set arpabet key value pair 'arpabet' to 'empty'
     lineReduced.arpabet = 'empty'
-    // console.log(lineReduced)
+    // remove numbers from 'arpanum' value and add as new key value pair
     lineReduced.arpabet = lineReduced.arpanum.replace(/[0-9]*/g, "")
     // error : 'Cannot read properties of undefined (reading 'replace')
     console.log(``)
@@ -27,4 +27,4 @@ for (let i = 0; i < textByLine.length; i++ ) {
     arpaData.push(lineReduced)
 }
 
-console.log(arpaData[0])
+console.log(arpaData[100789])
